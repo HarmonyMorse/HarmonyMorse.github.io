@@ -1,3 +1,185 @@
-h1 {
-    color: plum;
+/* Reset and Variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Primary text color for main */
+    --primary-text-dark: rgb(50, 30, 80);
+    /* Text color for areas with dark backgrounds */
+    --secondary-text-light: rgb(255, 255, 255);
+    /* Text color for areas with light or dark backgrounds */
+    --secondary-text-mid: rgb(140, 140, 240);
+    --secondary-shadow-mid: rgba(80, 80, 180, 0.7);
+    --secondary-shadow-dark: rgba(50, 30, 80, 0.7);
+    --background-color-light: rgb(220, 230, 250);
+    --background-color-mid: rgb(180, 190, 210);
+    --background-color-dark: rgb(40, 30, 60);
+    /* For bold highlights on light/dark backgrounds */
+    --highlight-bold-mid: rgb(74, 85, 131);
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    line-height: 1.6;
+    color: var(--primary-text-dark);
+    padding: 20px;
+    background-color: var(--background-color-light);
+}
+
+/* Nav Styles */
+header {
+    background: var(--background-color-dark);
+    color: var(--secondary-text-mid);
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: var(--highlight-bold-mid) 3px solid;
+}
+
+header a {
+    color: var(--secondary-text-light);
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+header a:hover {
+    color: var(--secondary-text-light);
+    background-color: var(--background-color-mid);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+/* Section Styles */
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background: white;
+}
+
+/* Top Image Styles */
+#topImage {
+    background-image: url("https://cdn.pixabay.com/photo/2016/07/03/18/04/tech-1495181_1280.jpg");
+    background-size: cover;
+    background-position: center;
+    color: var(--secondary-text-light);
+    text-align: center;
+    padding: 100px 20px;
+    text-shadow: var(--secondary-shadow-dark) 2px 2px;
+}
+
+.intro h1 {
+    font-family: "Texturina", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.intro p {
+    font-size: 1.2em;
+}
+
+/* Skills Styles */
+#skills ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#skills li {
+    background: var(--background-color-mid);
+    color: var(--primary-text-dark);
+    padding: 10px;
+    list-style-type: none;
+    text-align: center;
+    box-shadow: var(--secondary-shadow-mid) 2px 2px 5px;
+    border-right: var(--background-color-dark) 2px solid;
+    border-bottom: var(--background-color-dark) 2px solid;
+}
+
+/* Projects Styles */
+.project {
+    margin-bottom: 20px;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+}
+
+.project a {
+    display: inline-block;
+    margin: 10px 5px;
+    background: var(--background-color-dark);
+    color: var(--secondary-text-light);
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+/* About Me and Contact Styles */
+#about p,
+#contact p {
+    margin-bottom: 15px;
+}
+
+#about a,
+#contact a,
+#projects a {
+    color: var(--secondary-text-light);
+    text-decoration: none;
+    background-color: var(--background-color-mid);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#about a:hover,
+#contact a:hover,
+#projects a:hover {
+    background-color: var(--background-color-dark);
+    color: var(--secondary-text-light);
+}
+
+/* Footer Styles */
+footer {
+    background: var(--background-color-dark);
+    color: var(--secondary-text-light);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    #skills ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header {
+        padding-top: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
 }
