@@ -23,7 +23,6 @@ body {
     font-family: "Arial", sans-serif;
     line-height: 1.6;
     color: var(--primary-text-dark);
-    padding: 20px;
     background-color: var(--background-color-light);
 }
 
@@ -31,7 +30,7 @@ body {
 header {
     background: var(--background-color-dark);
     color: var(--secondary-text-mid);
-    padding-top: 30px;
+    padding-top: 20px;
     min-height: 70px;
     border-bottom: var(--highlight-bold-mid) 3px solid;
 }
@@ -59,6 +58,12 @@ nav ul {
 
 nav ul li {
     margin: 0 20px;
+}
+
+/* Main Styles */
+main {
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /* Section Styles */
