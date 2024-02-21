@@ -111,9 +111,10 @@ section {
     padding: 10px;
     list-style-type: none;
     text-align: center;
-    box-shadow: var(--secondary-shadow-mid) 2px 2px 5px;
     border-right: var(--background-color-dark) 2px solid;
     border-bottom: var(--background-color-dark) 2px solid;
+    border-top: var(--background-color-light) 2px solid;
+    border-left: var(--background-color-light) 2px solid;
 }
 
 /* Projects Styles */
@@ -187,9 +188,10 @@ section {
     margin: 5px;
     list-style-type: none;
     text-align: center;
-    box-shadow: var(--secondary-shadow-mid) 2px 2px 5px;
     border-right: var(--background-color-dark) 2px solid;
     border-bottom: var(--background-color-dark) 2px solid;
+    border-top: var(--background-color-light) 2px solid;
+    border-left: var(--background-color-light) 2px solid;
 }
 
 #about a,
