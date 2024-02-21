@@ -28,6 +28,8 @@ body {
 
 /* Nav Styles */
 header {
+    position: sticky;
+    top: 0;
     background: var(--background-color-dark);
     color: var(--secondary-text-mid);
     padding-top: 20px;
@@ -218,7 +220,7 @@ footer {
     color: var(--secondary-text-light);
     text-align: center;
     padding: 20px;
-    position: relative;
+    position: sticky;
     bottom: 0;
     width: 100%;
 }
