@@ -59,10 +59,75 @@
             </section>
             <section id="skills">
                 <h2>Skills</h2>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
+                <div>
+                    <label>Filters:</label>
+                    <button onclick="filter(event)" class="all filterOption basic" id="filterSelected">All</button>
+                    <button onclick="filter(event)" class="cs filterOption basic">Computer Science</button>
+                    <button onclick="filter(event)" class="ios filterOption basic">iOS Development</button>
+                    <button onclick="filter(event)" class="devops filterOption basic">DevOps</button>
+                    <button onclick="filter(event)" class="web filterOption basic">Web Development</button>
+                    <br>
+                    <button onclick="filter(event)" class="specialty filterOption">Specialty</button>
+                    <button onclick="filter(event)" class="progLanguage filterOption">Programming Language</button>
+                    <button onclick="filter(event)" class="tool filterOption">Tool</button>
+                    <button onclick="filter(event)" class="libAndFramework filterOption">Library/Framework</button>
+                    <button onclick="filter(event)" class="database filterOption">Database</button>
+                    <button onclick="filter(event)" class="softSkill filterOption">Soft Skill</button>
+                    <button onclick="filter(event)" class="other filterOption">Other</button>
+                </div>
+                <ul id="skillsList">
+                    <!-- colors: softSkill, other, tool, libAndFramework, progLanguage, specialty, database -->
+                    <!-- filters: cs, ios, devops, web -->
+                    <li class="skill softSkill">Adaptable</li>
+                    <li class="skill softSkill">Analytical</li>
+                    <li class="skill softSkill">Articulative</li>
+                    <li class="skill other cs">Algorithms</li>
+                    <li class="skill other cs">Data Structures</li>
+                    <li class="skill softSkill">Detail Oriented</li>
+                    <li class="skill softSkill">Eager and Quick Learner</li>
+                    <li class="skill tool ios">Auto Layout</li>
+                    <li class="skill libAndFramework web">Axios</li>
+                    <li class="skill tool devops">CLI</li>
+                    <li class="skill progLanguage web">CSS</li>
+                    <li class="skill other web">DOM</li>
+                    <li class="skill specialty devops">DevOps</li>
+                    <li class="skill libAndFramework web">Django</li>
+                    <li class="skill progLanguage web">EJS</li>
+                    <li class="skill libAndFramework web">Express.js</li>
+                    <li class="skill tool">Figma</li>
+                    <li class="skill specialty web">Front-End Development</li>
+                    <li class="skill specialty web">Full-Stack Development</li>
+                    <li class="skill tool devops">Git</li>
+                    <li class="skill tool devops">GitHub</li>
+                    <li class="skill progLanguage web">HTML</li>
+                    <li class="skill tool web">Heroku</li>
+                    <li class="skill specialty ios">iOS Development</li>
+                    <li class="skill specialty ios">iOS</li>
+                    <li class="skill progLanguage web ios">JSON</li>
+                    <li class="skill progLanguage web">JavaScript</li>
+                    <li class="skill specialty web ios cs">MVC</li>
+                    <li class="skill specialty ios">Mobile Application Development</li>
+                    <li class="skill specialty ios">Mobile Design</li>
+                    <li class="skill database web">MongoDB</li>
+                    <li class="skill libAndFramework web">Node.js</li>
+                    <li class="skill database web">noSQL</li>
+                    <li class="skill specialty cs">OOP</li>
+                    <li class="skill database web">PostgreSQL</li>
+                    <li class="skill softSkill cs">Project Management</li>
+                    <li class="skill progLanguage web">Python</li>
+                    <li class="skill other web ios">REST APIs</li>
+                    <li class="skill libAndFramework web">React</li>
+                    <li class="skill specialty web">Responsive Design</li>
+                    <li class="skill database web">SQL</li>
+                    <li class="skill progLanguage ios">Swift</li>
+                    <li class="skill libAndFramework ios">UIKit</li>
+                    <li class="skill tool devops">Virtual Machines</li>
+                    <li class="skill tool web">VS Code</li>
+                    <li class="skill specialty web">Web Development</li>
+                    <li class="skill tool">Wireframe</li>
+                    <li class="skill progLanguage web">XML</li>
+                    <li class="skill tool ios">Xcode</li>
+                    <li class="skill progLanguage devops">zsh</li>
                 </ul>
             </section>
             <section id="projects">
@@ -90,9 +155,9 @@
                     >
                     <div class="projectDetails">
                         <ul class="projectSpecs">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
+                            <li class="progLanguage">HTML</li>
+                            <li class="progLanguage">CSS</li>
+                            <li class="progLanguage">JavaScript</li>
                         </ul>
                     </div>
                 </div>
@@ -113,9 +178,9 @@
                     >
                     <div class="projectDetails">
                         <ul class="projectSpecs">
-                            <li>Shell</li>
-                            <li>Multipass</li>
-                            <li>Nginx</li>
+                            <li class="progLanguage">Shell</li>
+                            <li class="tool">Multipass</li>
+                            <li class="tool">Nginx</li>
                         </ul>
                     </div>
                 </div>
@@ -169,4 +234,24 @@
             </p>
         </footer>
     </body>
+    <script>
+        const filterOption = document.getElementsByClassName("filterOption");
+        const skills = document.getElementsByClassName("skill");
+        const filter = (e) => {
+            for (const option of filterOption) {
+                option.id = "";
+            }
+            e.target.id = "filterSelected";
+            const curFilter = e.target.classList[0];
+            for (const skill of skills) {
+                if (curFilter === "all") {
+                    skill.style.display = "block";
+                } else if (skill.classList.contains(curFilter)) {
+                    skill.style.display = "block";
+                } else {
+                    skill.style.display = "none";
+                }
+            }
+        }
+    </script>
 </html>
