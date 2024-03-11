@@ -13,7 +13,7 @@
     --secondary-shadow-dark: rgba(50, 30, 80, 0.7);
     --background-color-light: rgb(220, 230, 250);
     --background-color-mid: rgb(180, 190, 210);
-    --background-color-mid-faded: rgba(180, 190, 210, .5);
+    --background-color-mid-faded: rgba(180, 190, 210, 0.5);
     --background-color-dark: rgb(40, 30, 60);
     /* For bold highlights on light/dark backgrounds */
     --highlight-bold-mid: rgb(74, 85, 131);
@@ -100,23 +100,109 @@ section {
 }
 
 /* Skills Styles */
-#skills ul {
+#skillsList {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     margin-top: 20px;
 }
 
-#skills li {
-    background: var(--background-color-mid);
-    color: var(--primary-text-dark);
+.skill {
     padding: 10px;
     list-style-type: none;
     text-align: center;
-    border-right: var(--background-color-dark) 2px solid;
-    border-bottom: var(--background-color-dark) 2px solid;
-    border-top: var(--background-color-light) 2px solid;
-    border-left: var(--background-color-light) 2px solid;
+}
+
+.filterOption {
+    padding: 6px;
+    list-style-type: none;
+    text-align: center;
+    margin-top: 6px;
+    cursor: pointer;
+}
+
+.basic {
+    background: #ddd; /* Pastel sky blue */
+    color: #616161; /* Darker blue for contrast */
+    border-right: #6c6c6c 2px solid;
+    border-bottom: #6c6c6c 2px solid;
+    border-top: #efefef 2px solid;
+    border-left: #efefef 2px solid;
+    padding: 10px;
+    list-style-type: none;
+    text-align: center;
+}
+
+#filterSelected {
+    background-color: var(--background-color-mid);
+    color: var(--secondary-text-light);
+    border-right: var(--background-color-light) 2px solid;
+    border-bottom: var(--background-color-light) 2px solid;
+    border-left: var(--background-color-dark) 2px solid;
+    border-top: var(--background-color-dark) 2px solid;
+}
+
+.progLanguage {
+    background: #ffbdbd; /* Pastel red */
+    color: #8b0000; /* Dark red for contrast */
+    border-right: #660000 2px solid;
+    border-bottom: #660000 2px solid;
+    border-top: #ffc8c8 2px solid;
+    border-left: #ffc8c8 2px solid;
+}
+
+.libAndFramework {
+    background: #baffc9; /* Pastel green */
+    color: #006400; /* Dark green for contrast */
+    border-right: #004d00 2px solid;
+    border-bottom: #004d00 2px solid;
+    border-top: #dfffec 2px solid;
+    border-left: #dfffec 2px solid;
+}
+
+.softSkill {
+    background: #bae1ff; /* Pastel blue */
+    color: #00008b; /* Dark blue for contrast */
+    border-right: #000066 2px solid;
+    border-bottom: #000066 2px solid;
+    border-top: #dcf0ff 2px solid;
+    border-left: #dcf0ff 2px solid;
+}
+
+.other {
+    background: #fbaed2; /* Pastel magenta */
+    color: #8b008b; /* Dark magenta for contrast */
+    border-right: #660066 2px solid;
+    border-bottom: #660066 2px solid;
+    border-top: #fdd0e4 2px solid;
+    border-left: #fdd0e4 2px solid;
+}
+
+.specialty {
+    background: #ffdab9; /* Pastel orange */
+    color: #ff8c00; /* Dark orange for contrast */
+    border-right: #cc7000 2px solid;
+    border-bottom: #cc7000 2px solid;
+    border-top: #ffe5c4 2px solid;
+    border-left: #ffe5c4 2px solid;
+}
+
+.tool {
+    background: #b0e0e6; /* Pastel cyan */
+    color: #008b8b; /* Dark cyan for contrast */
+    border-right: #005757 2px solid;
+    border-bottom: #005757 2px solid;
+    border-top: #c7f1f5 2px solid;
+    border-left: #c7f1f5 2px solid;
+}
+
+.database {
+    background: #FDFFB6; /* Pastel yellow */
+    color: #63630A; /* Dark yellow for contrast */
+    border-right: #63630A 2px solid;
+    border-bottom: #63630A 2px solid;
+    border-top: #FFFFD1 2px solid;
+    border-left: #FFFFD1 2px solid;
 }
 
 /* Projects Styles */
@@ -184,16 +270,10 @@ section {
 }
 
 .projectSpecs li {
-    background: var(--background-color-mid);
-    color: var(--primary-text-dark);
     padding: 10px;
     margin: 5px;
     list-style-type: none;
     text-align: center;
-    border-right: var(--background-color-dark) 2px solid;
-    border-bottom: var(--background-color-dark) 2px solid;
-    border-top: var(--background-color-light) 2px solid;
-    border-left: var(--background-color-light) 2px solid;
 }
 
 #about a,
